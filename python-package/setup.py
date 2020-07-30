@@ -1,5 +1,6 @@
 """Setup xgboost package."""
 import os
+import io
 import shutil
 import subprocess
 import logging
@@ -280,7 +281,7 @@ if __name__ == '__main__':
           version=open(os.path.join(
               CURRENT_DIR, 'xgboost/VERSION')).read().strip(),
           description="XGBoost Python Package",
-          long_description=open(os.path.join(CURRENT_DIR, 'README.rst'),
+          long_description=io.open(os.path.join(CURRENT_DIR, 'README.rst'),
                                 encoding='utf-8').read(),
           install_requires=[
               'numpy',
